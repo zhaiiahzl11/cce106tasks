@@ -9,16 +9,14 @@ class RowMain extends StatelessWidget {
       appBar: AppBar(title: const Text('TASK 5 - LESTOJAS'), centerTitle: true),
       body: Center(
         child: Row(
-          // Options: center, spaceAround, spaceBetween, spaceEvenly, start, end
-          mainAxisAlignment:
-              MainAxisAlignment.center, // <-- change this value only
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Container(width: 90, height: 90, color: Colors.red), // Container
-            Container(width: 80, height: 80, color: Colors.yellow), // Container
-            Container(width: 70, height: 70, color: Colors.blue), // Container
+            Container(width: 90, height: 90, color: Colors.red),
+            Container(width: 80, height: 80, color: Colors.yellow),
+            Container(width: 70, height: 70, color: Colors.blue),
           ],
-        ), // Row
-      ), // Center
-    ); // Scaffold
+        ),
+      ),
+    );
   }
 }

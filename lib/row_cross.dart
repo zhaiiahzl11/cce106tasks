@@ -9,7 +9,7 @@ class RowCross extends StatelessWidget {
       appBar: AppBar(title: const Text('TASK 5 - LESTOJAS'), centerTitle: true),
       body: Center(
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(width: 90, height: 90, color: Colors.red),
             Container(width: 80, height: 80, color: Colors.yellow),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pavlovapage.dart';
+import 'auth/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: PavlovaPage(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const LoginForm(),
     );
   }
 }

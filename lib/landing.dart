@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class LandingPage extends StatelessWidget {
   final String username;
   final String password;
-  const LandingPage({super.key, required this.username, required this.password});
+  const LandingPage({
+    super.key,
+    required this.username,
+    required this.password,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("LASTNAME Activity 2"), // <-- change LASTNAME to your last name
-      ), // AppBar
+      appBar: AppBar(title: const Text("TASK 6 - LESTOJAS")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,10 +24,10 @@ class LandingPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => Navigator.pop(context),
               child: Text("Back to Login"),
-            ), // ElevatedButton
+            ),
           ],
-        ), // Column
-      ), // Center
-    ); // Scaffold
+        ),
+      ),
+    );
   }
 }

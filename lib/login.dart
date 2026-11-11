@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'landing.dart';
 import 'register.dart';
 
@@ -20,11 +21,9 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LandingPage(
-          username: username,
-          password: password,
-        ), // LandingPage
-      ), // MaterialPageRoute
+        builder: (context) =>
+            LandingPage(username: username, password: password),
+      ),
     );
   }
 
@@ -39,19 +38,12 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       minimumSize: const Size.fromHeight(50),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ), // RoundedRectangleBorder
-      textStyle: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
     );
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LASTNAME Activity 2'), // <-- change LASTNAME to your last name
-      ), // AppBar
+      appBar: AppBar(title: const Text('TASK 6 - LESTOJAS')),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
@@ -66,9 +58,9 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ), // OutlineInputBorder
-                ), // InputDecoration
-              ), // TextField
+                  ),
+                ),
+              ),
               const SizedBox(height: 15),
               TextField(
                 controller: _passwordController,
@@ -78,10 +70,10 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.lock),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ), // OutlineInputBorder
-                ), // InputDecoration
+                  ),
+                ),
                 obscureText: true,
-              ), // TextField
+              ),
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: _login,
@@ -90,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                   foregroundColor: WidgetStateProperty.all(Colors.white),
                 ),
                 child: const Text('Login'),
-              ), // ElevatedButton
+              ),
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: _goToRegister,
@@ -102,11 +94,11 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 child: const Text('Register'),
-              ), // ElevatedButton
+              ),
             ],
-          ), // Column
-        ), // SingleChildScrollView
-      ), // Center
-    ); // Scaffold
+          ),
+        ),
+      ),
+    );
   }
 }

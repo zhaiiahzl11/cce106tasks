@@ -9,7 +9,7 @@ class ColumnCross extends StatelessWidget {
       appBar: AppBar(title: const Text('TASK 5 - LESTOJAS'), centerTitle: true),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(width: 90, height: 90, color: Colors.red),
             Container(width: 80, height: 80, color: Colors.yellow),

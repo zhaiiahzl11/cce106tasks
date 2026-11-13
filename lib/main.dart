@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'auth/login.dart';
+import '/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginForm(),
+      home: LoginPage(),
     );
   }
 }
